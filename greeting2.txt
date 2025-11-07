@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <title>Сонирхолтой мэндчилгээ</title>
+</head>
+<body>
+    <h1>Мэндчилгээ програм</h1>
+    <input type="text" id="nameInput" placeholder="Нэрээ оруулна уу">
+    <button onclick="greetUser()">Мэндчилгээ авах</button>
+    <p id="greeting"></p>
+
+    <script>
+        function greetUser() {
+            const name = document.getElementById("nameInput").value;
+            const greetings = [
+                `Сайн уу, ${name}! Өнөөдөр гайхалтай өдөр болно шүү!`,
+                `Хөөх, ${name}! Чи яг супер баатар шиг санагдаж байна!`,
+                `${name}, одоо инээмсэглээрэй! Хүн бүрийн өдөр гэрэлтэнэ!`,
+                `Сайн байна уу, ${name}! Өнөөдөр шинэ адал явдал чамайг хүлээж байна!`
+            ];
+            // Случайн мэндчилгээ сонгох
+            const randomGreeting = greetings[Math.floor(Math.random() * greetings.length)];
+            document.getElementById("greeting").innerText = randomGreeting;
+        }
+    </script>
+</body>
+</html>
